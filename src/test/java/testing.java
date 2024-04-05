@@ -152,6 +152,7 @@ public class testing {
         _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/form/div[2]/input")).click();
         _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div[2]/div[9]/button[2]")).click();
         String orderNotPurchased = _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/h2")).getText();
+
         Assert.assertEquals(orderNotPurchased, "Your order is not completed, your cart is empty");
     }
 
