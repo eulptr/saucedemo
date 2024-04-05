@@ -140,6 +140,25 @@ public class testing {
     }
 
     @Test
+    public void test11() {
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input")).sendKeys("standard_user");
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/div[2]/input")).sendKeys("secret_sauce");
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/input")).click();
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/button")).click();
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[1]/div[3]/a/span")).click();
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div[2]/button[2]")).click();
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/form/div[1]/div[1]/input")).sendKeys("Eulalija");
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/form/div[1]/div[2]/input")).sendKeys("Petroke");
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/form/div[1]/div[3]/input")).sendKeys("76152");
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/form/div[2]/input")).click();
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/div[2]/div[9]/button[2]")).click();
+        _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[2]/button")).click();
+        String backHome = _globalDriver.findElement(By.xpath("/html/body/div/div/div/div[1]/div[2]/span")).getText();
+        Assert.assertEquals(backHome, "Products");
+    }
+
+
+    @Test
     public void test12() {
         _globalDriver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input")).sendKeys("standard_user");
         _globalDriver.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/div[2]/input")).sendKeys("secret_sauce");
